@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <button onClick="start()">start</button>
+    <button onClick="stop()">stop</button>
+
+    <div id="container"></div>
+
+    
+</body>
+</html>
+<script>
+
+    var images = [
+        "https://tse2.mm.bing.net/th?id=OIP.mFXNN6qv7YPbSYtSiyxjIQAAAA&pid=Api&P=0&h=180",
+        "https://tse3.mm.bing.net/th?id=OIP.tOBkPzxqaInOjR5ivpgfXgHaNK&pid=Api&P=0&h=180",
+        "https://tse3.mm.bing.net/th?id=OIP.lcMq-dcUyZdIH45PpeH_4wHaE8&pid=Api&P=0&h=180",
+        "https://tse4.mm.bing.net/th?id=OIP.R1UF3UmpHb9pPDjdNBeZNQHaHN&pid=Api&P=0&h=180",
+    ];
+
+    let id;
+    function start(){
+        let slideImage = document.createElement("img");
+
+        let i=0;
+         id = setInterval(function (){
+            // if(i == images.length){
+            //     i=0;
+            // }
+            if(i == 0) {
+                i =images.length;
+            }
+            //    slideImage.src = images[i++];
+
+                 slideImage.src = images[i--];
+                document.querySelector("#container").append
+                (slideImage);
+            }, 1000);
+    }
+
+    function stop() {
+        clearInterval(id);
+        document.querySelector("#container")="";
+    }
+</script>
+
