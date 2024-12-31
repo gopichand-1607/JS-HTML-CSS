@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //   function studentDetail(name, age) {
+  //     this.name = name;
+  //     this.age = age;
+  //     this.batch = "flm-2";
+  //     this.course = "web-development";
+  //   }
+
+  //   let student3 = new studentDetail("goku", 100);
+  //   console.log(student3);
+
+  let student1 = {
+    name: "mahesh",
+    age: 21,
+    batch: "flm-2",
+  };
+
+  let student2 = {
+    name: "chandra",
+    age: 21,
+    batch: "flm-2",
+  };
+
+  let student3 = {
+    name: "goku",
+    age: 2,
+    batch: "flm-2",
+  };
+
+  function addProperties(city, state) {
+    this.studentCity = city;
+    this.studentState = state;
+  }
+
+  // call / apply / bind;
+
+
+  addProperties.call(student1, "hyderabad", "telangana");
+
+  //   console.log(student1);
+
+  addProperties.apply(student2, ["viz", "andra"]);
+
+  //   console.log(student2);
+
+  let updateStudent3 = addProperties.bind(student3, "hyderabad", "telangana");
+
+  updateStudent3();
+  console.log(student3);
+  
+
+  //call/ apply / bind
+  //   this will  be refered to the object which  you want to  assign new key  and value pairs;
+</script>

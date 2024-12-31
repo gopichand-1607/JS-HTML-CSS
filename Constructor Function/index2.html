@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //   {
+  //       firstName:"mahesh",
+  //       lastName: "k",
+  //       print:function(){
+  //           console.log(this.firstName + " "+ this.lastName)
+  //       }
+  //   }
+
+  function studentDetails(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+
+    this.print = function () {
+      console.log(this.firstName + " " + this.lastName);
+    };
+  }
+
+  let student1 = new studentDetails("mahesh", "k");
+
+  console.log("student1", student1);
+  console.log(student1.print());
+
+  //what is this keyword
+
+  //   this is a special keyword in js which refers to object.
+
+  //   1. if this is present inside an object --> this refers to owner object.
+  //   2. alone this refers to global object (window object)
+
+  //  3. In a function , this refers to the global object
+
+  // in construct function we use this key to create custom object.
+</script>

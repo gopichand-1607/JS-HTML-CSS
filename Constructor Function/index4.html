@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  // inheritance --->
+
+  let grandFather = {
+    name: "goku",
+    lastName: "dragon ball",
+    DNA: "saiyan",
+    bloodGroup: "o+",
+  };
+
+  let Father = Object.create(grandFather);
+
+  Father.name = "gohan";
+  Father.houseName = "earth";
+
+  let son = Object.create(Father);
+
+  // GrandFather-->Father --->son
+
+  //   console.log(Father);
+
+  son.name = "gotex";
+  //   console.log(son.hasOwnProperty("name"));
+  console.log(son.wife);
+
+  //   console.log(son);
+
+  // [[prototype]]--> this points to the original model form which it is built
+
+  //   console.log(son.__proto__); //father
+
+  //   console.log(son.__proto__.__proto__); //grandfather
+
+  //   console.log(son.__proto__.__proto__.__proto__); // object.
+
+  //   console.log(son.__proto__.__proto__.__proto__.__proto__); //null
+
+  let array = [1, 2, 3];
+
+  //   console.log(array.__proto__.__proto__.__proto__);
+
+  let string = "mahesh goud"; // []
+
+  //   console.log(string.split(" ")); // ["mahesh","goud"]
+
+  //  object ----> array
+  //       -----> function
+  //       -----> string
+  //       -----> number;
+
+  // (array.__proto__.__proto__.__proto__);
+  // this is called prototype chain
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // let student1={
+  //     name:"sreeja",
+  //     age:16,
+  //     batch:"flm-batch"
+  // }
+
+  //-----------syntax------------//
+
+  //   function studentDetails() {
+  //     (this.name = "mahesh"),
+  //     console.log("this is inside", this);
+  //   } // constructor function
+
+  //   let student = new studentDetails();
+
+  //   console.log(student);
+
+  function studentDetails(names, age, place) {
+    this.name = names;
+    this.personAge = age;
+    this.personLocation = place;
+  } // constructor
+
+  let student1 = new studentDetails("chandra", 23, "delhi");
+  //new keyword is used to create custom object with constructor function and this
+  // points to the custom object
+
+  console.log(student1);
+
+  let student2 = new studentDetails("uthej", 22, "hyderabad");
+  console.log(student2);
+</script>
